@@ -1,2 +1,2 @@
 # no-more-statues
-Back-end for tracking historical statues and monuments removed in response to police brutality.
+Single-page application for tracking historical statues and monuments removed (and to-be removed) in response to police brutality.
