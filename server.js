@@ -1,5 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+require('dotenv').config();
+const api_key = process.env.API_KEY;
 
 const app = express();
 app.use(bodyParser.json());
