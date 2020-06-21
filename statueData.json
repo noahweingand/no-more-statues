@@ -120,7 +120,7 @@
         "removalDate": "2020-06-09"
     },
     {
-        "name": "Confederate Soldier (Hemming Park)",
+        "name": "Confederate Memorial (Hemming Park)",
         "coordinates": {
             "lat": 30.329326,
             "long": -81.659476
@@ -328,5 +328,295 @@
         "ref": "https://www.theguardian.com/us-news/2020/jun/20/san-francisco-statues-ulysses-s-grant-junipero-serra-francis-scott-key",
         "removed": true,
         "removalDate": "2020-06-19"
+    },
+    {
+        "name": "Robert E. Lee Bust",
+        "coordinates": {
+            "lat": 26.644297,
+            "long": -81.870054
+        },
+        "ref": "https://www.news-press.com/story/news/local/2020/06/02/robert-e-lee-bust-removed-fort-myers-post/5316700002/",
+        "removed": true,
+        "removalDate": "2020-06-01"
+    },
+    {
+        "name": "Robert E. Lee",
+        "coordinates": {
+            "lat": 32.378790,
+            "long": -86.271965
+        },
+        "ref": "https://www.montgomeryadvertiser.com/story/news/2020/06/02/robert-e-lee-statue-put-storage-city-defers-decisions-school-board/5316942002/",
+        "removed": true,
+        "removalDate": "2020-06-01"
+    },
+    {
+        "name": "Confederate Soldiers and Sailors Monument",
+        "coordinates": {
+            "lat": 39.73074,
+            "long": -86.14397
+        },
+        "ref": "https://en.wikipedia.org/wiki/Confederate_Soldiers_and_Sailors_Monument_(Indianapolis)",
+        "removed": true,
+        "removalDate": "2020-06-08"
+    },
+    {
+        "name": "Raphael Semmes",
+        "coordinates": {
+            "lat": 30.69037,
+            "long": -88.04003
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Raphael_Semmes",
+        "removed": true,
+        "removalDate": "2020-06-05"
+    },
+    {
+        "name": "John B. Castleman Monument",
+        "coordinates": {
+            "lat": 38.412311,
+            "long": -85.747381
+        },
+        "ref": "https://en.wikipedia.org/wiki/John_B._Castleman_Monument",
+        "removed": true,
+        "removalDate": "2020-06-08"
+    },
+    {
+        "name": "Monument to Confederate war soldiers",
+        "coordinates": {
+            "lat": 32.757222,
+            "long": -97.332778
+        },
+        "ref": "https://en.wikipedia.org/wiki/Monument_to_Confederate_war_soldiers,_Fort_Worth",
+        "removed": true,
+        "removalDate": "2020-06-13"
+    },
+    {
+        "name": "Spirit of the Confederacy",
+        "coordinates": {
+            "lat": 29.759867,
+            "long": -95.371640
+        },
+        "ref": "https://en.wikipedia.org/wiki/Spirit_of_the_Confederacy",
+        "removed": true,
+        "removalDate": "2020-06-17"
+    },
+    {
+        "name": "Gadsden Confederate Memorial",
+        "coordinates": {
+            "lat": 30.588967,
+            "long": -84.576330
+        },
+        "ref": "https://en.wikipedia.org/wiki/Gadsden_Confederate_Memorial",
+        "removed": true,
+        "removalDate": "2020-06-11"
+    },
+    {
+        "name": "DeKalb County Confederate Monument",
+        "coordinates": {
+            "lat": 33.774858,
+            "long": -84.297146
+        },
+        "ref": "https://en.wikipedia.org/wiki/DeKalb_County_Confederate_Monument",
+        "removed": true,
+        "removalDate": "2020-06-18"
+    },
+    {
+        "name": "Stand Watie and Confederate Soldier Fountain",
+        "coordinates": {
+            "lat": 35.852364,
+            "long": -94.991108
+        },
+        "ref": "https://www.kiro7.com/news/trending/cherokee-nation-removes-confederate-monuments-capitol-square/MZ7T765IARDXFEXWOT6TNXRJ7I/",
+        "removed": true,
+        "removalDate": "2020-06-13"
+    },
+    {
+        "name": "Stand Watie Monument",
+        "coordinates": {
+            "lat": 35.852364,
+            "long": -94.991108
+        },
+        "ref": "https://www.kiro7.com/news/trending/cherokee-nation-removes-confederate-monuments-capitol-square/MZ7T765IARDXFEXWOT6TNXRJ7I/",
+        "removed": true,
+        "removalDate": "2020-06-13"
+    },
+    {
+        "name": "Hey Reb!",
+        "coordinates": {
+            "lat": 36.108291,
+            "long": -115.138503
+        },
+        "ref": "https://en.wikipedia.org/wiki/Hey_Reb!_(sculpture)",
+        "removed": true,
+        "removalDate": "2020-06-16"
+    },
+    {
+        "name": "Memorial to Company A, Capitol Guards",
+        "coordinates": {
+            "lat": 34.738333,
+            "long": -92.265
+        },
+        "ref": "https://en.wikipedia.org/wiki/Memorial_to_Company_A,_Capitol_Guards",
+        "removed": true,
+        "removalDate": "2020-06-18"
+    },
+    {
+        "name": "North Carolina State Confederate Monument",
+        "coordinates": {
+            "lat": 35.781380,
+            "long": -78.639802
+        },
+        "ref": "https://www.ncpedia.org/monument/confederate-monument-state",
+        "removed": true,
+        "removalDate": "2020-06-19"
+    },
+    {
+        "name": "Pine Bluff Confederate Monument",
+        "coordinates": {
+            "lat": 34.228630,
+            "long": -91.996479
+        },
+        "ref": "https://en.wikipedia.org/wiki/Pine_Bluff_Confederate_Monument",
+        "removed": true,
+        "removalDate": "2020-06-20"
+    },
+    {
+        "name": "Appomattox",
+        "coordinates": {
+            "lat": 38.803917,
+            "long": -77.047194
+        },
+        "ref": "https://en.wikipedia.org/wiki/Appomattox_(statue)",
+        "removed": true,
+        "removalDate": "2020-05-31"
+    },
+    {
+        "name": "Slave Auction Block",
+        "coordinates": {
+            "lat": 38.303124,
+            "long": -77.461650
+        },
+        "ref": "https://en.wikipedia.org/wiki/Slave_Auction_Block,_Fredericksburg",
+        "removed": true,
+        "removalDate": "2020-06-05"
+    },
+    {
+        "name": "Portsmouth Confederate Monument",
+        "coordinates": {
+            "lat": 36.835858,
+            "long": -76.300925
+        },
+        "ref": "https://en.wikipedia.org/wiki/Confederate_Monument_(Portsmouth,_Virginia)",
+        "removed": true,
+        "removalDate": "2020-06-10"
+    },
+    {
+        "name": "Howitzer Monument",
+        "coordinates": {
+            "lat": 37.548685,
+            "long": -77.454960
+        },
+        "ref": "https://en.wikipedia.org/wiki/Howitzer_Monument",
+        "removed": true,
+        "removalDate": "2020-06-16"
+    },
+    {
+        "name": "Christopher Columbus",
+        "coordinates": {
+            "lat": 39.93653,
+            "long": -75.09168
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Christopher_Columbus_(Camden,_New_Jersey)",
+        "removed": true,
+        "removalDate": "2020-06-11"
+    },
+    {
+        "name": "Christopher Columbus",
+        "coordinates": {
+            "lat": 29.729544,
+            "long": -95.391632
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Christopher_Columbus_(Houston)",
+        "removed": true,
+        "removalDate": "2020-06-11"
+    },
+    {
+        "name": "Christopher Columbus",
+        "coordinates": {
+            "lat": 33.997338,
+            "long": -81.049136
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Christopher_Columbus_(Columbia,_South_Carolina)",
+        "removed": true,
+        "removalDate": "2020-06-12"
+    },
+    {
+        "name": "Christopher Columbus",
+        "coordinates": {
+            "lat": 41.561991,
+            "long": -72.646362
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Christopher_Columbus_(Middletown,_Connecticut)",
+        "removed": true,
+        "removalDate": "2020-06-13"
+    },
+    {
+        "name": "Bust of Christopher Columbus",
+        "coordinates": {
+            "lat": 42.330192,
+            "long": -83.042275
+        },
+        "ref": "https://en.wikipedia.org/wiki/Bust_of_Christopher_Columbus_(Detroit)",
+        "removed": true,
+        "removalDate": "2020-06-15"
+    },
+    {
+        "name": "Christopher Columbus",
+        "coordinates": {
+            "lat": 39.969609,
+            "long": -82.988038
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Christopher_Columbus_(Columbus_State_Community_College)",
+        "removed": true,
+        "removalDate": "2020-06-19"
+    },
+    {
+        "name": "Christopher Columbus",
+        "coordinates": {
+            "lat": 38.605251,
+            "long": -90.243061
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Christopher_Columbus_(St._Louis)",
+        "removed": true,
+        "removalDate": "2020-06-16"
+    },
+    {
+        "name": "Christopher Columbus",
+        "coordinates": {
+            "lat": 37.802955,
+            "long": -122.406134
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Christopher_Columbus_(San_Francisco)",
+        "removed": true,
+        "removalDate": "2020-06-18"
+    },
+    {
+        "name": "Juan de Oñate",
+        "coordinates": {
+            "lat": 35.097779,
+            "long": -106.668301
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Juan_de_O%C3%B1ate_(Albuquerque,_New_Mexico)",
+        "removed": true,
+        "removalDate": "2020-06-16"
+    },
+    {
+        "name": "Diego de Vargas",
+        "coordinates": {
+            "lat": 35.686995,
+            "long": -105.936278
+        },
+        "ref": "https://statues.vanderkrogt.net/object.php?webpage=ST&record=usnm21",
+        "removed": true,
+        "removalDate": "2020-06-18"
     }
 ]
