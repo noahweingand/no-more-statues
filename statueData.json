@@ -1,3 +1,332 @@
 [
-
+    {
+        "name": "Silent Sam",
+        "coordinates": {
+            "lat": 35.91395,
+            "long": -79.052375
+        },
+        "ref": "https://en.wikipedia.org/wiki/Silent_Sam#:~:text=On%20October%2012%2C%202015%2C%20University,applause%20from%20some%20faculty%20present.",
+        "removed": true,
+        "removalDate": "2018-08-20"
+    },
+    {
+        "name": "Robert E. Lee (Duke University)",
+        "coordinates": {
+            "lat": 36.001664,
+            "long": -78.939811
+        },
+        "ref": "https://www.npr.org/sections/thetwo-way/2017/08/19/544678037/duke-university-removes-robert-e-lee-statue-from-chapel-entrance",
+        "removed": true,
+        "removalDate": "2017-08-19"
+    },
+    {
+        "name": "Confederate Statue (Durham County Courthouse)",
+        "coordinates": {
+            "lat": 35.992448,
+            "long": -78.901227
+        },
+        "ref": "https://www.nytimes.com/2017/08/14/us/protesters-in-durham-topple-a-confederate-monument.html",
+        "removed": true,
+        "removalDate": "2017-08-14"
+    },
+    {
+        "name": "Robert E. Lee Monument",
+        "coordinates": {
+            "lat": 29.943056,
+            "long": -90.072222
+        },
+        "ref": "https://en.wikipedia.org/wiki/Robert_E._Lee_Monument_(New_Orleans,_Louisiana)#:~:text=On%20May%2018%2C%202017%2C%20the,crane%20from%20its%20column%20pedestal.",
+        "removed": true,
+        "removalDate": "2017-05-19"
+    },
+    {
+        "name": "Confederate Monument (Fort Warren)",
+        "coordinates": {
+            "lat": 42.320233,
+            "long": -70.927639
+        },
+        "ref": "https://www.bostonmagazine.com/news/2017/10/02/massachusetts-removing-confederate-monument/",
+        "removed": true,
+        "removalDate": "2017-10-01"
+    },
+    {
+        "name": "Confederate Soldiers and Sailors Monument (Birmingham, Alabama)",
+        "coordinates": {
+            "lat": 33.52007,
+            "long": -86.80948
+        },
+        "ref": "https://en.wikipedia.org/wiki/Confederate_Soldiers_and_Sailors_Monument_(Birmingham,_Alabama)",
+        "removed": true,
+        "removalDate": "2020-05-31"
+    },
+    {
+        "name": "Charles Linn",
+        "coordinates": {
+            "lat": 33.52007,
+            "long": -86.80948
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Charles_Linn",
+        "removed": true,
+        "removalDate": "2020-05-31"
+    },
+    {
+        "name": "Frank Rizzo",
+        "coordinates": {
+            "lat": 39.954286,
+            "long": -75.164292
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Frank_Rizzo",
+        "removed": true,
+        "removalDate": "2020-06-02"
+    },
+    {
+        "name": "Orville L. Hubbard",
+        "coordinates": {
+            "lat": 42.308141,
+            "long": -83.240129
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Orville_L._Hubbard",
+        "removed": true,
+        "removalDate": "2020-06-05"
+    },
+    {
+        "name": "Williams Wickham",
+        "coordinates": {
+            "lat": 37.546685,
+            "long": -77.450515
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Williams_Carter_Wickham",
+        "removed": true,
+        "removalDate": "2020-06-07"
+    },
+    {
+        "name": "Edward Colston",
+        "coordinates": {
+            "lat": 51.453342,
+            "long": -2.597429
+        },
+        "ref": "https://en.wikipedia.org/wiki/Edward_Colston#City-centre_memorial_statue",
+        "removed": true,
+        "removalDate": "2020-06-07"
+    },
+    {
+        "name": "Robert Milligan",
+        "coordinates": {
+            "lat": 51.50735,
+            "long": -0.02389
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Robert_Milligan",
+        "removed": true,
+        "removalDate": "2020-06-09"
+    },
+    {
+        "name": "Confederate Soldier (Hemming Park)",
+        "coordinates": {
+            "lat": 30.329326,
+            "long": -81.659476
+        },
+        "ref": "https://www.actionnewsjax.com/news/local/duval-county/breaking-confederate-monument-hemming-park-appears-be-its-way-down/56ES27ARXFAPDEGGHCEW5RKRUQ/",
+        "removed": true,
+        "removalDate": "2020-06-09"
+    },
+    {
+        "name": "King Leopold II",
+        "coordinates": {
+            "lat": 50.840649,
+            "long": 4.364374
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Leopold_II_of_Belgium,_Ekeren",
+        "removed": true,
+        "removalDate": "2020-06-09"
+    },
+    {
+        "name": "Christopher Columbus",
+        "coordinates": {
+            "lat": 37.547287,
+            "long": -77.476483
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Christopher_Columbus_(Richmond,_Virginia)",
+        "removed": true,
+        "removalDate": "2020-06-10"
+    },
+    {
+        "name": "Christopher Columbus",
+        "coordinates": {
+            "lat": 44.955325,
+            "long": -93.102169
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Christopher_Columbus_(Saint_Paul,_Minnesota)",
+        "removed": true,
+        "removalDate": "2020-06-10"
+    },
+    {
+        "name": "Jefferson Davis Monument",
+        "coordinates": {
+            "lat": 37.558743,
+            "long": -77.467795
+        },
+        "ref": "https://en.wikipedia.org/wiki/Jefferson_Davis_Memorial_(Richmond,_Virginia)",
+        "removed": true,
+        "removalDate": "2020-06-10"
+    },
+    {
+        "name": "Christopher Columbus",
+        "coordinates": {
+            "lat": 42.361298,
+            "long": -71.051188
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Christopher_Columbus_(North_End,_Boston)#:~:text=A%20statue%20of%20Christopher%20Columbus,evening%20of%20June%209%2C%202020.",
+        "removed": true,
+        "removalDate": "2020-06-11"
+    },
+    {
+        "name": "John Fane Charles Hamilton",
+        "coordinates": {
+            "lat": -37.787074,
+            "long": 175.281260
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_John_Fane_Charles_Hamilton",
+        "removed": true,
+        "removalDate": "2020-06-12"
+    },
+    {
+        "name": "Johnny Reb",
+        "coordinates": {
+            "lat": 36.850252,
+            "long": -76.289923
+        },
+        "ref": "https://en.wikipedia.org/wiki/Norfolk_Confederate_Monument#Removal",
+        "removed": true,
+        "removalDate": "2020-06-12"
+    },
+    {
+        "name": "Christopher Columbus",
+        "coordinates": {
+            "lat": 39.746187,
+            "long": -75.547372
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Christopher_Columbus_(Wilmington,_Delaware)",
+        "removed": true,
+        "removalDate": "2020-06-12"
+    },
+    {
+        "name": "Caesar Rodney",
+        "coordinates": {
+            "lat": 39.746187,
+            "long": -75.547372
+        },
+        "ref": "https://en.wikipedia.org/wiki/Equestrian_statue_of_Caesar_Rodney",
+        "removed": true,
+        "removalDate": "2020-06-12"
+    },
+    {
+        "name": "Christopher Columbus",
+        "coordinates": {
+            "lat": 32.644279,
+            "long": -117.007683
+        },
+        "ref": "https://www.sandiegouniontribune.com/news/public-safety/story/2020-06-12/chula-vista-puts-christopher-columbus-statue-in-storage-citing-public-safety-concerns",
+        "removed": true,
+        "removalDate": "2020-06-12"
+    },
+    {
+        "name": "Jefferson Davis",
+        "coordinates": {
+            "lat": 38.1867,
+            "long": -84.8753
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Jefferson_Davis_(Frankfort,_Kentucky)",
+        "removed": true,
+        "removalDate": "2020-06-13"
+    },
+    {
+        "name": "The Pioneer and Pioneer Mother",
+        "coordinates": {
+            "lat": 44.04578,
+            "long": -123.07579
+        },
+        "ref": "https://en.wikipedia.org/wiki/The_Pioneer_(Eugene,_Oregon)",
+        "removed": true,
+        "removalDate": "2020-06-13"
+    },
+    {
+        "name": "Thomas Jefferson",
+        "coordinates": {
+            "lat": 45.561430,
+            "long": -122.671957
+        },
+        "ref": "https://www.kgw.com/article/news/local/statue-of-george-washington-toppled-and-spray-pained-in-hollywood-neighborhood/283-6f3d5c28-74c6-4307-88d7-493c5dfcd59b",
+        "removed": true,
+        "removalDate": "2020-06-14"
+    },
+    {
+        "name": "Juan de Oñate",
+        "coordinates": {
+            "lat": 36.105758,
+            "long": -106.031727
+        },
+        "ref": "https://en.wikipedia.org/wiki/Equestrian_statue_of_Juan_de_O%C3%B1ate",
+        "removed": true,
+        "removalDate": "2020-06-15"
+    },
+    {
+        "name": "John Sutter",
+        "coordinates": {
+            "lat": 38.571078,
+            "long": -121.469386
+        },
+        "ref": "https://www.latimes.com/california/story/2020-06-16/statue-of-colonizer-john-sutter-removed-after-being-defaced-in-sacramento",
+        "removed": true,
+        "removalDate": "2020-06-15"
+    },
+    {
+        "name": "Josephus Daniels",
+        "coordinates": {
+            "lat": 35.777704,
+            "long": -78.642149
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Josephus_Daniels",
+        "removed": true,
+        "removalDate": "2020-06-16"
+    },
+    {
+        "name": "Albert Pike",
+        "coordinates": {
+            "lat": 38.8946,
+            "long": -77.0157
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Albert_Pike",
+        "removed": true,
+        "removalDate": "2020-06-19"
+    },
+    {
+        "name": "Junípero Serra",
+        "coordinates": {
+            "lat": 37.539149,
+            "long": -122.363551
+        },
+        "ref": "https://www.latimes.com/california/story/2020-06-20/junipero-serra-statue-toppled-in-downtown-l-a",
+        "removed": true,
+        "removalDate": "2020-06-19"
+    },
+    {
+        "name": "Francis Scott Key",
+        "coordinates": {
+            "lat": 37.771419,
+            "long": -122.466693
+        },
+        "ref": "https://en.wikipedia.org/wiki/Statue_of_Francis_Scott_Key_(San_Francisco)",
+        "removed": true,
+        "removalDate": "2020-06-19"
+    },
+    {
+        "name": "Ulysses S. Grant",
+        "coordinates": {
+            "lat": 37.769166,
+            "long": -122.481064
+        },
+        "ref": "https://www.theguardian.com/us-news/2020/jun/20/san-francisco-statues-ulysses-s-grant-junipero-serra-francis-scott-key",
+        "removed": true,
+        "removalDate": "2020-06-19"
+    }
 ]
