@@ -6,6 +6,6 @@ Single-page application for tracking historical statues and monuments removed (a
 - [whentheycamedown](https://whentheycamedown.com/)
 
 # To do
-- Front End
-- search routing
+- Front End - React?
+    - map? https://levelup.gitconnected.com/google-map-react-beginners-guide-85bb1a94b04a
 - deploy
