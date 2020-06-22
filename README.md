@@ -3,7 +3,7 @@ Single-page application for tracking historical statues and monuments removed (a
 
 # Sources
 [wiki](https://en.wikipedia.org/wiki/List_of_monuments_and_memorials_removed_during_the_George_Floyd_protests#United_States)
-[whentheycamedown](whentheycamedown.com)
+[whentheycamedown](https://whentheycamedown.com/)
 
 # To do
 - Front End
