@@ -1,18 +1,12 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+const express = require('express'); 
+const statues = express.Router();
 const aws = require('aws-sdk');
 aws.config.update({
     region: "us-east-1"
 })
-// require('dotenv').config();
-// const api_key = process.env.API_KEY;
-
-const app = express();
 const docClient = new aws.DynamoDB.DocumentClient();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/all', async function (req, res) {
+statues.get('/all', async function (req, res) {
     var params = { TableName: 'no-more-statues' };
     try {
         const data = await docClient.scan(params).promise();
@@ -25,7 +19,7 @@ app.get('/all', async function (req, res) {
     }
 })
 
-app.get('/date', async function (req, res) {
+statues.get('/date', async function (req, res) {
     var dateParams = {
         TableName: "no-more-statues",
         FilterExpression: "begins_with (removalDate, :date)",
@@ -44,7 +38,7 @@ app.get('/date', async function (req, res) {
     }
 })
 
-app.get('/name', async function (req, res) { 
+statues.get('/name', async function (req, res) { 
     var nameParams = {
         TableName: "no-more-statues",
         FilterExpression: "begins_with (#name, :name)", // case sensitive, probably need to change
@@ -66,7 +60,7 @@ app.get('/name', async function (req, res) {
     }
 })
 
-app.get('/standing', async function (req, res) { 
+statues.get('/standing', async function (req, res) { 
     var isRemovedParams = {
         TableName: "no-more-statues",
         FilterExpression: "removed = :status",
@@ -85,7 +79,4 @@ app.get('/standing', async function (req, res) {
     }
 })
 
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
-});
+module.exports = statues;
