@@ -9,46 +9,42 @@ aws.config.update({
 
 const app = express();
 const docClient = new aws.DynamoDB.DocumentClient();
-var params = { TableName: 'no-more-statues' };
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/getAllStatues', function (req, res) {
-    var scanPromise = docClient.scan(params).promise();
-    scanPromise.then(
-        function(data) {
-            console.log("/getAllStatues call successful");
-            res.send(data)
-        },
-        function(error) {
-            console.log("error on /getAllStatues call")
-            res.send(error);
-        }
-    )
+app.get('/all', async function (req, res) {
+    var params = { TableName: 'no-more-statues' };
+    try {
+        const data = await docClient.scan(params).promise();
+        console.log("get all statues call successful");
+        res.send(data);
+    }
+    catch (error) {
+        console.log("error on get all statues call");
+        res.send(error);
+    }
 })
 
-app.post('/getStatuesByDate', function (req, res) {
+app.get('/date', async function (req, res) {
     var dateParams = {
         TableName: "no-more-statues",
         FilterExpression: "begins_with (removalDate, :date)",
         ExpressionAttributeValues: {
-            ":date": req.body.date
+            ":date": req.query.date
         }
     }
-    let datePromise = docClient.scan(dateParams).promise();
-    datePromise.then(
-        function(data) {
-            console.log("/getStatuesByDate call successful");
-            res.send(data)
-        },
-        function(error) {
-            console.log("error on /getStatuesByDate call")
-            res.send(error);
-        }
-    )
+    try {
+        let data = await docClient.scan(dateParams).promise();
+        console.log("get statues by date call successful");
+        res.send(data);
+    }
+    catch (error) {
+        console.log("error on get statues by date call");
+        res.send(error);
+    }
 })
 
-app.post('/getStatuesByName', function (req, res) { 
+app.get('/name', async function (req, res) { 
     var nameParams = {
         TableName: "no-more-statues",
         FilterExpression: "begins_with (#name, :name)", // case sensitive, probably need to change
@@ -56,62 +52,37 @@ app.post('/getStatuesByName', function (req, res) {
             "#name": "name" // name is a reserved word with dynamodb, so work around
         },
         ExpressionAttributeValues: {
-            ":name": req.body.name
+            ":name": req.query.name
         }
     }
-    let namePromise = docClient.scan(nameParams).promise();
-    namePromise.then(
-        function(data) {
-            console.log("/getStatuesByName call successful");
-            res.send(data)
-        },
-        function(error) {
-            console.log("error on /getStatuesByName call")
-            res.send(error);
-        }
-    )
+    try {
+        const data = await docClient.scan(nameParams).promise();
+        console.log("get statues by name call successful");
+        res.send(data);
+    }
+    catch (error) {
+        console.log("error on get statues by name call");
+        res.send(error);
+    }
 })
 
-app.get('/getRemovedStatues', function (req, res) { 
+app.get('/standing', async function (req, res) { 
     var isRemovedParams = {
         TableName: "no-more-statues",
         FilterExpression: "removed = :status",
         ExpressionAttributeValues: {
-            ":status": true
+            ":status": (req.query.not == 'true') ? false : true
         }
     }
-    let removedPromise = docClient.scan(isRemovedParams).promise();
-    removedPromise.then(
-        function(data) {
-            console.log("/getRemovedStatues call successful");
-            res.send(data)
-        },
-        function(error) {
-            console.log("error on /getRemovedStatues call")
-            res.send(error);
-        }
-    )
-})
-
-app.get('/getStandingStatues', function (req, res) { 
-    var isRemovedParams = {
-        TableName: "no-more-statues",
-        FilterExpression: "removed = :status",
-        ExpressionAttributeValues: {
-            ":status": false
-        }
+    try {
+        const data = await docClient.scan(isRemovedParams).promise();
+        console.log("get standing statues call successful");
+        res.send(data);
     }
-    let standingPromise = docClient.scan(isRemovedParams).promise();
-    standingPromise.then(
-        function(data) {
-            console.log("/getStandingStatues call successful");
-            res.send(data)
-        },
-        function(error) {
-            console.log("error on /getStandingStatues call")
-            res.send(error);
-        }
-    )
+    catch (error) {
+        console.log("error on get standing statues call");
+        res.send(error);
+    }
 })
 
 const PORT = process.env.PORT || 8080;
