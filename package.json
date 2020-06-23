@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Back-end for tracking historical statues and monuments removed in response to police brutality.",
   "scripts": {
-    "start": "node server.js"
+    "start": "node backend/server.js"
   },
   "dependencies": {
     "aws-sdk": "^2.701.0",
