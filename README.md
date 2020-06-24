@@ -6,9 +6,15 @@ Single-page application for tracking historical statues and monuments removed (a
 - [whentheycamedown](https://whentheycamedown.com/)
 
 # Run locally
+Run server
 ```
 git clone https://github.com/noahweingand/no-more-statues.git
 cd no-more-statues
+npm start
+```
+Run client
+```
+cd frontend
 npm start
 ```
 
