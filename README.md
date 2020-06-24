@@ -9,12 +9,12 @@ Single-page application for tracking historical statues and monuments removed (a
 Run server
 ```
 git clone https://github.com/noahweingand/no-more-statues.git
-cd no-more-statues
+cd no-more-statues/backend
 npm start
 ```
 Run client
 ```
-cd frontend
+cd no-more-statues/frontend
 npm start
 ```
 
