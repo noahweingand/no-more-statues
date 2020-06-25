@@ -6,6 +6,11 @@ aws.config.update({
 })
 const docClient = new aws.DynamoDB.DocumentClient();
 
+statues.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
+
 statues.get('/all', async function (req, res) {
     var params = { TableName: 'no-more-statues' };
     try {
