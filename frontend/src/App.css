@@ -39,4 +39,10 @@
 .map {
   height: 100vh;
 }
+/* body {
+  background-color: #282c34;
+} */
+h1 {
+  font-size: 23px;
+}
 #mapid { height: 180px; }
