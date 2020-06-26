@@ -19,6 +19,10 @@ npm start
 ```
 
 # To do
-- Front End - React?
-    - map? https://levelup.gitconnected.com/google-map-react-beginners-guide-85bb1a94b04a
+- Front End
+    - create service worker for getting statue data from api
+        - implement search
+    - add nav bar (title, search, info, github), prob bootstrap
 - deploy
+    - backend - serverless npm package
+    - front end - static files to s3 bucket?
