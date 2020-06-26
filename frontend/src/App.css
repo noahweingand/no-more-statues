@@ -53,4 +53,10 @@ a {
 p {
   text-align: center;
 }
-#mapid { height: 180px; }
+#mapid { 
+  height: 110%;
+  width: 100%; 
+}
+.navbar {
+  font: Helvetica;
+}
