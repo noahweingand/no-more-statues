@@ -44,5 +44,13 @@
 } */
 h1 {
   font-size: 23px;
+  text-align: center;
+}
+a {
+  font-size: 15px;
+  text-align: center;
+}
+p {
+  text-align: center;
 }
 #mapid { height: 180px; }
