@@ -14,15 +14,13 @@ class App extends Component {
         this.state = {
             startLat: 30,
             startLng: -20,
-            startZoom: 2,
+            startZoom: 2.5,
             statueData: [],
             mapIcon: L.icon({
                 iconUrl: MapIcon,
                 iconSize:     [50, 50], // size of the icon
-                shadowSize:   [50, 64], // size of the shadow
-                iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-                shadowAnchor: [4, 62],  // the same for the shadow
-                popupAnchor:  [-3, -76]
+                iconAnchor:   [0, 0], // 10,15 point of the icon which will correspond to marker's location
+                popupAnchor:  [25, 0] //-3,-10
             })
         }
     }
@@ -37,7 +35,7 @@ class App extends Component {
         const position = [this.state.startLat, this.state.startLng];
         return ( 
             <div>
-                <h1>No More Statues!</h1>
+                <h1>No More Statues</h1>
                 <Map style={{ width: '100%', height: '600px' }} center={position} zoom={this.state.startZoom}>
                     <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -46,7 +44,8 @@ class App extends Component {
                     {this.state.statueData.map((statues, idx) =>
                     <Marker icon={this.state.mapIcon} key={`statue-${idx}`} position={[statues["coordinates"]["lat"], [statues["coordinates"]["long"]]]}>
                         <Popup>
-                            <h2>{statues["name"]}</h2>
+                            <a target="_blank" href={statues["ref"]} >{statues["name"]}</a>
+                            <p>Removed: {statues["removalDate"]}</p>
                         </Popup>
                     </Marker>
                     )};
