@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet';
 import {Map, TileLayer, Marker, Popup} from 'react-leaflet';
 import axios from 'axios';
-import MapIcon from './img/mapIcon.png'
+import MapIcon from './img/mapIcon.png';
+import {Navbar, Nav, NavDropdown, Button, FormControl, Form } from 'react-bootstrap';
 
 class App extends Component {
     constructor(props) {
@@ -34,7 +36,27 @@ class App extends Component {
         const position = [this.state.startLat, this.state.startLng];
         return ( 
             <div>
-                <h1>No More Statues</h1>
+                <Navbar bg="light" expand="lg">
+                    <Navbar.Brand href="#home">no more statues</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="mr-auto">
+                        <Nav.Link href="#home">About</Nav.Link>
+                        <Nav.Link href="#link">Github</Nav.Link>
+                        </Nav>
+                        <Form inline>
+                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                        <NavDropdown title="Search by" id="basic-nav-dropdown" >
+                            <NavDropdown.Item href="#action/3.1">Statue</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">Date Removed</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.3">Standing</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">Removed</NavDropdown.Item>
+                        </NavDropdown>
+                        <Button variant="">Search</Button>
+                        </Form>
+                    </Navbar.Collapse>
+                </Navbar>
                 <Map style={{ width: '100%', height: '600px' }} center={position} zoom={this.state.startZoom}>
                     <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
