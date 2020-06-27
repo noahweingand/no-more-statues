@@ -148,7 +148,7 @@ class App extends Component {
                     </Button>
                     </Modal.Footer>
                 </Modal>
-                <Map style={{ width: '100%', height: '600px' }} center={position} zoom={this.state.startZoom}>
+                <Map style={{ width: '100%', height: '604px' }} center={position} zoom={this.state.startZoom}>
                     <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -157,7 +157,7 @@ class App extends Component {
                         <Marker icon={this.state.mapIcon} key={`statue-${idx}`} position={[statues["coordinates"]["lat"], [statues["coordinates"]["long"]]]}>
                             <Popup>
                                 <a target="_blank" href={statues["ref"]} >{statues["name"]}</a>
-                                <p>Removed: {statues["removalDate"]}</p>
+                                <p>Removed: {statues["removed"] ? statues["removalDate"] : 'No'}</p>
                             </Popup>
                         </Marker>
                     )};
