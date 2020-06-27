@@ -26,6 +26,8 @@ class App extends Component {
             showHide: false,
             isNameSearch: false,
             isDateSearch: false,
+            isRemovedSearch: false,
+            isStandingSearch: false,
             query: ""
         }
     }
@@ -47,23 +49,56 @@ class App extends Component {
     }
 
     fetchSearchResults(query) {
-        axios.get('http://localhost:8080/api/statues/name', { params: { name: query }})
-        .then(res => {
-            const statueData = res.data["Items"];
-            this.setState({statueData});
-        })
+        if (this.state.isNameSearch === true) {
+            axios.get('http://localhost:8080/api/statues/name', { params: { name: query }})
+            .then(res => {
+                const statueData = res.data["Items"];
+                this.setState({statueData});
+            })
+        }
+        else if (this.state.isDateSearch === true) {
+            axios.get('http://localhost:8080/api/statues/date', { params: { date: query }})
+            .then(res => {
+                const statueData = res.data["Items"];
+                this.setState({statueData});
+            })
+        }
     }
 
     handleSearch = ( event ) => {
         const query = event.target.value;
         this.setState({query: query}, () => {this.fetchSearchResults(query)});
-        console.log(this.statueData)
+    }
+
+    onNameClick = () => {
+        this.setState({isNameSearch: true, isDateSearch: false, isRemovedSearch: false, isStandingSearch: false});
+    }
+
+    onDateClick = () => {
+        this.setState({isNameSearch: false, isDateSearch: true, isRemovedSearch: false, isStandingSearch: false});
+    }
+
+    onRemovedClick = () => {
+        this.setState({isDateSearch: false, isNameSearch: false, isRemovedSearch: true, isStandingSearch: false});
+        axios.get('http://localhost:8080/api/statues/standing', { params: { not: true }})
+            .then(res => {
+                const statueData = res.data["Items"];
+                this.setState({statueData});
+            })
+    }
+
+    onStandingClick = () => {
+        this.setState({isDateSearch: false, isNameSearch: false, isRemovedSearch: false, isStandingSearch: true});
+        axios.get('http://localhost:8080/api/statues/standing', { params: { not: false }})
+            .then(res => {
+                const statueData = res.data["Items"];
+                this.setState({statueData});
+            })
     }
 
     render() { 
         const position = [this.state.startLat, this.state.startLng];
         const { query } = this.state.query;
-        console.warn(this.state.query)
         return ( 
             <div>
                 <Navbar bg="light" expand="lg">
@@ -77,13 +112,12 @@ class App extends Component {
                         <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" value={query} onChange={this.handleSearch}/>
                         <NavDropdown title="Search by" id="basic-nav-dropdown" >
-                            <NavDropdown.Item href="#action/3.1">Name</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Date Removed</NavDropdown.Item>
+                            <NavDropdown.Item onClick={this.onNameClick}>Name</NavDropdown.Item>
+                            <NavDropdown.Item onClick={this.onDateClick}>Date Removed</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.3">Removed</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.4">Standing</NavDropdown.Item>
+                            <NavDropdown.Item onClick={this.onRemovedClick}>Removed</NavDropdown.Item>
+                            <NavDropdown.Item onClick={this.onStandingClick}>Standing</NavDropdown.Item>
                         </NavDropdown>
-                        {/* <Button variant="primary">Search</Button> */}
                         </Form>
                     </Navbar.Collapse>
                 </Navbar>
@@ -97,13 +131,14 @@ class App extends Component {
                         has incited a demand for real change across the globe and proves we have a long battle ahead of us.
                         <p></p>
                         All locations automatically appear on the map. To search, select what to search by at the top right
-                        and type your search in the search bar. 'Removed' and 'Standing' will return all statues removed or standing.
+                        and type your search in the search bar. For date search, format it as 'yyyy-mm-dd', and for name, try lowercase.
+                        'Removed' and 'Standing' will return all statues removed or standing.
                         <p></p>
                         Movements like the ones going on right now rely heavily on funding for memorials, communities, and bails.
                         Below are some resources for donating. Please consider.
                         <p></p>
                         <ul>
-                            <li><a href="https://nymag.com/strategist/article/where-to-donate-for-black-lives-matter.html">General Resource</a></li>
+                            <li><a href="https://nymag.com/strategist/article/where-to-donate-for-black-lives-matter.html">Where to donate</a></li>
                             <li><a href="https://www.communityjusticeexchange.org/nbfn-directory">National Bail Fund Network</a></li>
                         </ul>
                     </Modal.Body>
