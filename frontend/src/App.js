@@ -9,9 +9,9 @@ import MapIcon from './img/mapIcon.png';
 import {Navbar, Nav, NavDropdown, Button, FormControl, Form, Modal } from 'react-bootstrap';
 
 class App extends Component {
+
     constructor(props) {
         super(props);
-
         this.state = {
             startLat: 30,
             startLng: -20,
@@ -23,21 +23,45 @@ class App extends Component {
                 iconAnchor:   [0, 0], // 10,15 point of the icon which will correspond to marker's location
                 popupAnchor:  [25, 0] //-3,-10
             }),
-            showHide: false
+            showHide: false,
+            query: ""
         }
     }
+
     handleModalShowHide() {
         this.setState({ showHide: !this.state.showHide })
     }
-    componentDidMount() {
+
+    loadAllStatues() {
         axios.get('http://localhost:8080/api/statues/all')
         .then(res => {
             const statueData = res.data["Items"];
             this.setState({statueData});
         })
     }
+
+    componentDidMount() {
+        this.loadAllStatues();
+    }
+
+    fetchSearchResults(query) {
+        axios.get('http://localhost:8080/api/statues/name', { params: { name: query }})
+        .then(res => {
+            const statueData = res.data["Items"];
+            this.setState({statueData});
+        })
+    }
+
+    handleSearch = ( event ) => {
+        const query = event.target.value;
+        this.setState({query: query}, () => {this.fetchSearchResults(query)});
+        console.log(this.statueData)
+    }
+
     render() { 
         const position = [this.state.startLat, this.state.startLng];
+        const { query } = this.state.query;
+        console.warn(this.state.query)
         return ( 
             <div>
                 <Navbar bg="light" expand="lg">
@@ -46,10 +70,10 @@ class App extends Component {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                         <Nav.Link onClick={() => this.handleModalShowHide()}>About</Nav.Link>
-                        <Nav.Link href="https://github.com/noahweingand/no-more-statues" target="_blank">Github</Nav.Link>
+                        <Nav.Link href="https://github.com/noahweingand/no-more-statues" target="_blank" rel="noopener noreferrer">Github</Nav.Link>
                         </Nav>
                         <Form inline>
-                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                        <FormControl type="text" placeholder="Search" className="mr-sm-2" value={query} onChange={this.handleSearch}/>
                         <NavDropdown title="Search by" id="basic-nav-dropdown" >
                             <NavDropdown.Item href="#action/3.1">Statue</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Date Removed</NavDropdown.Item>
@@ -78,12 +102,12 @@ class App extends Component {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
                     {this.state.statueData.map((statues, idx) =>
-                    <Marker icon={this.state.mapIcon} key={`statue-${idx}`} position={[statues["coordinates"]["lat"], [statues["coordinates"]["long"]]]}>
-                        <Popup>
-                            <a target="_blank" href={statues["ref"]} >{statues["name"]}</a>
-                            <p>Removed: {statues["removalDate"]}</p>
-                        </Popup>
-                    </Marker>
+                        <Marker icon={this.state.mapIcon} key={`statue-${idx}`} position={[statues["coordinates"]["lat"], [statues["coordinates"]["long"]]]}>
+                            <Popup>
+                                <a target="_blank" href={statues["ref"]} >{statues["name"]}</a>
+                                <p>Removed: {statues["removalDate"]}</p>
+                            </Popup>
+                        </Marker>
                     )};
                 </Map> 
             </div>
