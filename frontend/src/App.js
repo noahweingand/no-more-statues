@@ -24,6 +24,8 @@ class App extends Component {
                 popupAnchor:  [25, 0] //-3,-10
             }),
             showHide: false,
+            isNameSearch: false,
+            isDateSearch: false,
             query: ""
         }
     }
@@ -75,13 +77,13 @@ class App extends Component {
                         <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" value={query} onChange={this.handleSearch}/>
                         <NavDropdown title="Search by" id="basic-nav-dropdown" >
-                            <NavDropdown.Item href="#action/3.1">Statue</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.1">Name</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Date Removed</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action/3.3">Removed</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.4">Standing</NavDropdown.Item>
                         </NavDropdown>
-                        <Button variant="primary">Search</Button>
+                        {/* <Button variant="primary">Search</Button> */}
                         </Form>
                     </Navbar.Collapse>
                 </Navbar>
@@ -89,7 +91,22 @@ class App extends Component {
                     <Modal.Header closeButton onClick={() => this.handleModalShowHide()}>
                     <Modal.Title>About</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>Hello, this is blah blah BLM</Modal.Body>
+                    <Modal.Body>
+                        ‘no more statues’ is an effort to track the removal of statues, monuments, and 
+                        busts idolizing racists, colonizers, and confederates across the globe. George Floyd’s murder 
+                        has incited a demand for real change across the globe and proves we have a long battle ahead of us.
+                        <p></p>
+                        All locations automatically appear on the map. To search, select what to search by at the top right
+                        and type your search in the search bar. 'Removed' and 'Standing' will return all statues removed or standing.
+                        <p></p>
+                        Movements like the ones going on right now rely heavily on funding for memorials, communities, and bails.
+                        Below are some resources for donating. Please consider.
+                        <p></p>
+                        <ul>
+                            <li><a href="https://nymag.com/strategist/article/where-to-donate-for-black-lives-matter.html">General Resource</a></li>
+                            <li><a href="https://www.communityjusticeexchange.org/nbfn-directory">National Bail Fund Network</a></li>
+                        </ul>
+                    </Modal.Body>
                     <Modal.Footer>
                     <Button variant="secondary" onClick={() => this.handleModalShowHide()}>
                         Close
