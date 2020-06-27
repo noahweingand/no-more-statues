@@ -20,9 +20,10 @@ npm start
 
 # To do
 - Front End
-    - create service worker for getting statue data from api
-        - implement search
-    - add nav bar (title, search, info, github), prob bootstrap
+    - implement rest of searches with dropdown denoting the type of search
+- general
+    - add rest of standing statues, update any that have been tore down
+    - is how the search call to api going to be expensive???
 - deploy
     - backend - serverless npm package
     - front end - static files to s3 bucket?
