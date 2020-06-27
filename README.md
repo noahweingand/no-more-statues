@@ -20,7 +20,7 @@ npm start
 
 # To do
 - Front End
-    - implement rest of searches with dropdown denoting the type of search
+    - minor changes
 - general
     - add rest of standing statues, update any that have been tore down
     - is how the search call to api going to be expensive???
