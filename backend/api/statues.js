@@ -70,7 +70,7 @@ statues.get('/standing', async function (req, res) {
         TableName: "no-more-statues",
         FilterExpression: "removed = :status",
         ExpressionAttributeValues: {
-            ":status": (req.query.not == 'true') ? false : true
+            ":status": (req.query.not == 'true') ? true : false
         }
     }
     try {
