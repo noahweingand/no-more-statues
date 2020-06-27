@@ -46,9 +46,9 @@ statues.get('/date', async function (req, res) {
 statues.get('/name', async function (req, res) { 
     var nameParams = {
         TableName: "no-more-statues",
-        FilterExpression: "begins_with (#name, :name)", // case sensitive, probably need to change
+        FilterExpression: "contains (#name, :name)", // case sensitive, probably need to change
         ExpressionAttributeNames: {
-            "#name": "name" // name is a reserved word with dynamodb, so work around
+            "#name": "searchName" // name is a reserved word with dynamodb, so work around
         },
         ExpressionAttributeValues: {
             ":name": req.query.name
