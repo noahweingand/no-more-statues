@@ -6,23 +6,11 @@ Single-page application for tracking historical statues and monuments removed (a
 - [whentheycamedown](https://whentheycamedown.com/)
 
 # Run locally
-Run server (the server won't run except for me locally because of AWS credentials)
-```
-git clone https://github.com/noahweingand/no-more-statues.git
-cd no-more-statues/backend
-npm start
-```
 Run client
 ```
 cd no-more-statues/frontend
 npm start
 ```
 
-# To do
-- Front End
-    - update api calls before deploying
-- general
-    - is how the search call to api going to be expensive???
-- deploy
-    - backend - serverless npm package
+# deploy
     - front end - static files to s3 bucket?
