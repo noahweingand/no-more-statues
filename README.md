@@ -13,4 +13,10 @@ npm start
 ```
 
 # deploy
-    - front end - static files to s3 bucket?
+- frontend
+    - markers not appearing on mobile
+    - map not taking up screensize
+- backend 
+    - change api url route
+- general
+    - fill out this read me with info
