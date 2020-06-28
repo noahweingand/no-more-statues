@@ -52,7 +52,9 @@ a {
 p {
   text-align: center;
 }
-#mapid { 
-  height: 110%;
-  width: 100%; 
+.leaflet-container {
+  height:100%;
+  width:100%;
+  padding: 0;
+  margin: 0;
 }
