@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'leaflet/dist/leaflet.css'
+import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import {Map, TileLayer, Marker, Popup} from 'react-leaflet';
 import axios from 'axios';
-import MapIcon from './img/mapIcon.png';
+import MapIcon from 'leaflet/dist/images/marker-icon.png';
 import {Navbar, Nav, NavDropdown, Button, FormControl, Form, Modal } from 'react-bootstrap';
 
 class App extends Component {
@@ -19,9 +19,9 @@ class App extends Component {
             statueData: [],
             mapIcon: L.icon({
                 iconUrl: MapIcon,
-                iconSize:     [50, 50], // size of the icon
+                iconSize:     [25, 30], // size of the icon
                 iconAnchor:   [0, 0], // 10,15 point of the icon which will correspond to marker's location
-                popupAnchor:  [25, 0] //-3,-10
+                popupAnchor:  [12, 0] //-3,-10
             }),
             showHide: false,
             isNameSearch: false,
@@ -148,7 +148,7 @@ class App extends Component {
                     </Button>
                     </Modal.Footer>
                 </Modal>
-                <Map style={{ width: '100%', height: '604px' }} center={position} zoom={this.state.startZoom}>
+                <Map style={{ width: window.innerWidth, height: window.innerHeight}} center={position} zoom={this.state.startZoom}>
                     <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
