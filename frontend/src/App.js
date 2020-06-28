@@ -37,7 +37,7 @@ class App extends Component {
     }
 
     loadAllStatues() {
-        axios.get('http://localhost:8080/api/statues/all')
+        axios.get('https://api.nomorestatues.com/api/statues/all')
         .then(res => {
             const statueData = res.data["Items"];
             this.setState({statueData});
@@ -50,14 +50,14 @@ class App extends Component {
 
     fetchSearchResults(query) {
         if (this.state.isNameSearch === true) {
-            axios.get('http://localhost:8080/api/statues/name', { params: { name: query }})
+            axios.get('https://api.nomorestatues.com/api/statues/name', { params: { name: query }})
             .then(res => {
                 const statueData = res.data["Items"];
                 this.setState({statueData});
             })
         }
         else if (this.state.isDateSearch === true) {
-            axios.get('http://localhost:8080/api/statues/date', { params: { date: query }})
+            axios.get('https://api.nomorestatues.com/api/statues/date', { params: { date: query }})
             .then(res => {
                 const statueData = res.data["Items"];
                 this.setState({statueData});
@@ -80,7 +80,7 @@ class App extends Component {
 
     onRemovedClick = () => {
         this.setState({isDateSearch: false, isNameSearch: false, isRemovedSearch: true, isStandingSearch: false});
-        axios.get('http://localhost:8080/api/statues/standing', { params: { not: true }})
+        axios.get('https://api.nomorestatues.com/api/statues/standing', { params: { not: true }})
             .then(res => {
                 const statueData = res.data["Items"];
                 this.setState({statueData});
@@ -89,7 +89,7 @@ class App extends Component {
 
     onStandingClick = () => {
         this.setState({isDateSearch: false, isNameSearch: false, isRemovedSearch: false, isStandingSearch: true});
-        axios.get('http://localhost:8080/api/statues/standing', { params: { not: false }})
+        axios.get('https://api.nomorestatues.com/api/statues/standing', { params: { not: false }})
             .then(res => {
                 const statueData = res.data["Items"];
                 this.setState({statueData});
