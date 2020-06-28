@@ -1,0 +1,19 @@
+service: be-no-more-statues
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: 
+  region: us-east-1
+  memorySize: 128
+functions:
+  app:
+    handler: backend/server/server.handler
+    events: 
+      - http: 
+          path: /
+          method: ANY
+          cors: true
+      - http: 
+          path: /{proxy+}
+          method: ANY
+          cors: true
