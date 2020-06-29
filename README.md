@@ -1,8 +1,8 @@
 # Live Site
-[nomorestatues.com](nomorestatues.com)
+[nomorestatues.com](https://nomorestatues.com)
 
 # Statue Data API
-Live at [api.nomorestatues.com/api/statues]
+Live at [api.nomorestatues.com/v1/statues](https://api.nomorestatues.com/v1/statues)
 
 # Description
 Single-page application for tracking historical statues and monuments removed (and to-be removed) in response to police brutality.
@@ -10,21 +10,19 @@ Single-page application for tracking historical statues and monuments removed (a
 As you may know, the removal of these statues has grown significant due to George Floyd’s murder inciting a demand for change across the globe. Previously donating to my city’s bail fund (shoutout Richmond, VA) and participating in protests, I wanted to do something more. As statues started to come down fast and all over, I found it rather difficult to find information on them all. I compiled data into a database, created an API to retrieve the data, and a client to interact with it.
 
 # Interacting with API
-Live at [api.nomorestatues.com/v1/statues](api.nomorestatues.com/v1/statues)
-
 - GET
     - '/' -> hello page, references this documentation
     - '/all' -> returns data on all statues
-        - Example: [api.nomorestatues.com/v1/statues/all](api.nomorestatues.com/v1/statues/all)
+        - Example: [api.nomorestatues.com/v1/statues/all](https://api.nomorestatues.com/v1/statues/all)
     - '/name' -> returns data on statues based off a lowercase search
         - query -> name: name
-        - Example: [api.nomorestatues.com/v1/statues/name?name=chris](api.nomorestatues.com/v1/statues/name?name=chris) (returns all statues with the name 'Chris')
+        - Example: [api.nomorestatues.com/v1/statues/name?name=chris](https://api.nomorestatues.com/v1/statues/name?name=chris) (returns all statues with the name 'Chris')
     - '/date' -> returns data on statues based off a 'yyyy-mm-dd' search
         - query -> date: date
-        - Example: [api.nomorestatues.com/v1/statues/date?date=2020-06-13](api.nomorestatues.com/v1/statues/date?date=2020-06-13) (returns all statues removed on June 13th, 2020)
+        - Example: [api.nomorestatues.com/v1/statues/date?date=2020-06-13](https://api.nomorestatues.com/v1/statues/date?date=2020-06-13) (returns all statues removed on June 13th, 2020)
     - '/standing' -> returns all standing (or removed) statues based off the query
         - query -> not: false
-        - Example: [api.nomorestatues.com/v1/statues/standing?not=false](api.nomorestatues.com/v1/statues/standing?not=false) (returns all standing statues)
+        - Example: [api.nomorestatues.com/v1/statues/standing?not=false](https://api.nomorestatues.com/v1/statues/standing?not=false) (returns all standing statues)
 
 # Run client locally
 Run client
