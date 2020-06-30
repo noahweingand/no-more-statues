@@ -27,6 +27,7 @@ As you may know, the removal of these statues has grown significant due to Georg
 # Run client locally
 Run client
 ```
+git clone https://github.com/noahweingand/no-more-statues.git
 cd no-more-statues/frontend
 npm start
 ```
