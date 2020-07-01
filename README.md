@@ -25,7 +25,6 @@ As you may know, the removal of these statues has grown significant due to Georg
         - Example: [api.nomorestatues.com/v1/statues/standing?not=false](https://api.nomorestatues.com/v1/statues/standing?not=false) (returns all standing statues)
 
 # Run client locally
-Run client
 ```
 git clone https://github.com/noahweingand/no-more-statues.git
 cd no-more-statues/frontend
@@ -44,12 +43,13 @@ npm start
     - Hosted on AWS Elastic Beanstalk
 - Frontend 
     - React app
+        - Map: react-leaflet
     - Hosted on AWS S3
 - Other hosting
     - AWS ACM, Route53, and Cloudfront to send everything securely to the domain
 
 # Issues during development
-1.	One difficulty I encountered as I started to test my API was that DynamoDB’s queries are case sensitive, which made it hard to handle the name searching on the front end. I had to add another attribute in the DB for searching, so right now searching only works in lowercase. In hindsight, I should’ve switched it out for something else, but I figured the document model was best since I knew the data wasn’t going to be too relational or abundant.
+1.	One difficulty I encountered as I started to test my API was that DynamoDB’s queries are case sensitive. I had to add another attribute in the DB for searching (in lowercase). In hindsight, I should’ve switched it out for something else, but I figured the document model was best since I knew the data wasn’t going to be too relational or abundant and didn't encounter this until API testing when I had entered all the data.
 2.	Accumulating data took the longest as I had to reference articles for cross streets for low profile statue coordinates. I also entered all entries to the database by hand but am thinking of creating a scraper to automate the process. This helps for entering data like names and date, but still doesn’t fix the coordinates problem.
 3.	Time was a priority as I wanted to get this out as soon as possible, so I rushed on the frontend. I think the functionality could be reworked more appropriately and expanded. Overall, the client could be structured better.
 
