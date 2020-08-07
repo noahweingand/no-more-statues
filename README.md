@@ -1,7 +1,7 @@
 # Live Site
 [nomorestatues.com](https://nomorestatues.com)
 
-# Statue Data API
+# Statue Data REST API
 Live at [api.nomorestatues.com/v1/statues](https://api.nomorestatues.com/v1/statues)
 
 # Description
@@ -36,7 +36,7 @@ npm start
 - [whentheycamedown](https://whentheycamedown.com/)
 
 # Technology Stack
-- Datebase
+- Database
     - DynamoDB
 - Backend (API)
     - Express Server
