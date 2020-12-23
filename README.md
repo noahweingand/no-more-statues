@@ -1,6 +1,8 @@
 # Live Site
 [nomorestatues.com](https://nomorestatues.com)
 
+![App Screenshot](./nms_ss.png)
+
 # Statue Data REST API
 Live at [api.nomorestatues.com/v1/statues](https://api.nomorestatues.com/v1/statues)
 
